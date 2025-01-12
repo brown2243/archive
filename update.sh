@@ -26,7 +26,7 @@ for submodule in $submodules; do
 done
 
 git add .
-git commit -m "$commit_message"
+git commit -m $'$commit_message'
 git push
 
 # 완료 메시지 출력
