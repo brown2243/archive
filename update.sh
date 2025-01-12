@@ -19,14 +19,14 @@ for submodule in $submodules; do
   # 현재 커밋과 최신 커밋 비교 (커밋 수 계산)
   new_commits=$(git rev-list HEAD..origin/HEAD --count)
   # 결과 출력
-  commit_message+="\n$submodule: $new_commits commits"
+  commit_message+="-m $submodule: $new_commits commits"
   # 상위 디렉토리로 돌아가기
   cd - >/dev/null || exit
   git add "$submodule"
 done
 
 git add .
-git commit -m $'$commit_message'
+git commit -m $"$commit_message"
 git push
 
 # 완료 메시지 출력
