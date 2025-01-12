@@ -25,14 +25,12 @@ for submodule in $submodules; do
   git add "$submodule"
 done
 
-echo "$commit_message" >>"$commit_message_file"
 git add .
-# git commit -m $"$commit_message"
+echo "$commit_message" >>"$commit_message_file"
 git commit -F "$commit_message_file"
 git push
 
 # 완료 메시지 출력
 echo "Submodule update complete!"
-
 # 커밋 메시지 파일 삭제
 rm -f "$commit_message_file"
