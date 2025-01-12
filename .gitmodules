@@ -1,0 +1,3 @@
+[submodule "easy-to-learn-operating-system"]
+	path = easy-to-learn-operating-system
+	url = git@github.com:brown2243/easy-to-learn-operating-system.git
